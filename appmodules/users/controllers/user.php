@@ -7,5 +7,9 @@ class UserController extends Controller {
     function add(){
         $this->view->add();
     }
+    function save(){
+        $dataArrived =  $_POST;
+        $this->view->show($dataArrived);
+    }
 }
 ?>
