@@ -10,12 +10,8 @@ class ProductController extends Controller {
     }
 
     public function list() {
-        $products = [["id"=>1,"description"=>"Mouse negro Acteck"],
-                     ["id"=>2,"description"=>"Laptop Asus negro"],
-                     ["id"=>3,"description"=>"Celular Huawei Pro40"],
-                     ["id"=>4,"description"=>"Calculadora Casio model mx-5050"],
-                     ["id"=>5,"description"=>"Cañon Epson Blanco"]
-                    ];
+        $sql = "SELECT * FROM product";
+        $products = $this->model->query($sql);
         $this->view->list($products);
 
     }

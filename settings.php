@@ -17,6 +17,20 @@
     const STATIC_DIR = APP_DIR . "static/";
     const DEFAULT_VIEW = "/static/index.html";
 
+    class Driver { 
+        const MYSQL='mysql';
+        const POSTGRES='pgsql';
+    }
+
+    import('core.db.IPersistence');
+    import('core.db.DataBase');
+    import('core.db.DAO');
+    import('core.db.MySql');
+    import('core.db.ConnectionDB');
+
+    const DB_DRIVER =Driver::MYSQL; #-- driver de mysql por defecto
+    require_once "connectioninfo";
+    DataBase::setConnectionDB(new MySql(CONNECTION_INFO));
 
     function import($pathResource='') {
         $file = APP_DIR . str_replace('.', '/', $pathResource);
