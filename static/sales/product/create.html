@@ -1,4 +1,17 @@
-
-    <h1> Agregar productos </h1>
-    <h3>{MESSAGE}</h3>
-
+<div class="w3-card-4">
+          
+    <header class="w3-container w3-green">
+      <h3>Listado de productos</h3>
+    </header>
+    <form action="/sales/product/save" method="post">
+        <label for="description">Producto: </label>
+        <input type="text" id="description" name="description"> <br>
+        <label for="price">Precio: </label>
+        <input type="text" id="price" name="price"> <br>
+        <label for="category">Categoria: </label>
+        <input type="text" id="category" name="category"> <br>
+        <label for="brand">Marca: </label>
+        <input type="text" id="brand" name="brand"> <br>
+        <input type="submit" value="Guardar">
+    </form>
+</div>

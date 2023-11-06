@@ -26,6 +26,7 @@
     import('core.db.DataBase');
     import('core.db.DAO');
     import('core.db.MySql');
+    import('core.db.Postgres');
     import('core.db.ConnectionDB');
 
     const DB_DRIVER =Driver::MYSQL; #-- driver de mysql por defecto

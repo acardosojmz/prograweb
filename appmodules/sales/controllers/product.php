@@ -15,5 +15,14 @@ class ProductController extends Controller {
         $this->view->list($products);
 
     }
+    public function save() {
+        $this->model->id = 0;
+        $this->model->description = $_POST['description'];
+        $this->model->price = $_POST['price'];
+        $this->model->category = $_POST['category'];
+        $this->model->brand = $_POST['brand'];
+        $this->model->save();
+        $this->list();    
+    }
 }
 ?>
