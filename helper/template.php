@@ -52,7 +52,7 @@ function get_regex($key, $eliminar_keys=True) {
         return $this->render_regex($key, $stack);
     }
  
-    protected function set_dict($dict=array()) {
+    protected function set_dict($dict = []) {
         $this->sanitize($dict);
         $keys = array_keys($dict);
         $values = array_values($dict);
@@ -60,6 +60,7 @@ function get_regex($key, $eliminar_keys=True) {
             $key = "{{$key}}";
         }
         $this->dict = array_combine($keys, $values);
+
     }
    
     private function sanitize(&$dict) {

@@ -10,6 +10,8 @@
                 <th>PRICE </th>
                 <th>CATEGORY </th>
                 <th>BRAND </th>
+                <th>IMAGE </th>
+                <th colspan="2">ACTION </th>
             </thead>
             <tbody>
                 <!--LISTADO-->
@@ -19,6 +21,16 @@
                     <td>{price}</td>
                     <td>{category}</td>
                     <td>{brand}</td>
+                    <td><img src="/static/image/{image}" width="100px" heigth="100px"></td>
+
+                    <td><a href="/sales/product/edit/{id}"> <img src="/static/image/edit.png"></a></td> 
+
+                    <td><a href="/sales/product/delete/{id}" 
+                        onclick="return confirm('Está seguro de borrar {description}?');"> 
+                        <img src="/static/image/delete.png">
+                        </a>
+                    </td> 
+
                 </tr>
                 <!--LISTADO-->
             </tbody>

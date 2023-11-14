@@ -9,6 +9,7 @@
             $this->price=0.0;
             $this->category="";
             $this->brand="";
+            $this->image="";
         }
 
     }
